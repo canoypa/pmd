@@ -1,0 +1,51 @@
+.pmd-ripple{
+  will-change: transform,opacity;
+  overflow: hidden;
+}
+.pmd-ripple:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: var(--pmd-ripple-size);
+  height: var(--pmd-ripple-size);
+  border-radius: 50%;
+  transform: scale(0);
+  transform-origin: center center;
+  pointer-events: none;
+
+  background-color: #888;
+}
+.pmd-ripple.pmd-ripple-active::after{
+  animation: ripple-in .225s ease-out forwards, ripple-fadein .225s ease-out forwards;
+}
+.pmd-ripple.pmd-ripple-remove::after{
+  animation: ripple-out .15s ease-out forwards;
+}
+
+@keyframes ripple-in{
+  from{
+    transform: translate(var(--pmd-ripple-start,0)) scale(0);
+  }
+  to{
+    transform: translate(var(--pmd-ripple-end,0)) scale(1);
+  }
+}
+@keyframes ripple-fadein{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: .4;
+  }
+}
+@keyframes ripple-out{
+  from{
+    transform: translate(0) scale(1);
+    opacity: .4;
+  }
+  to{
+    opacity: 0;
+  }
+}

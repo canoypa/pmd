@@ -1,0 +1,38 @@
+.loading{
+  width: 50px;
+  height: 50px;
+  user-select: none;
+}
+.loading svg{
+  animation: rotate 2s linear infinite;
+}
+.loading svg circle{
+  fill: none;
+  stroke: rgb(0, 188, 212);
+  stroke-dasharray: 1,200;
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: dash 1.5s infinite;
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash{
+  0%{
+    stroke-dasharray: 0,100;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 50,100;
+    stroke-dashoffset: 0px;
+  }
+  100%{
+    stroke-dasharray: 0,100;
+    stroke-dashoffset: -60px;
+  }
+}

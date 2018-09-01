@@ -1,0 +1,57 @@
+.select{
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  height: 52px;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='5' viewBox='7 10 10 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%230' fill-rule='evenodd' opacity='.54' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px bottom 12px;
+}
+.select select{
+  color: rgba(0,0,0,.87);
+  padding: 20px 26px 4px 0;
+  font-family: Roboto,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  letter-spacing: .00937em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.select:not(:hover) select{
+  border-bottom-color: rgba(0,0,0,.42);
+}
+.select.focus select{
+  border-bottom-color: rgba(98, 0, 238, 0.87);
+}
+.select.focus label, .select.hv label{
+  color: rgba(98, 0, 238, 0.87);
+  transform: translateY(-1em) scale(.75);
+}
+.select label{
+  position: absolute;
+  left: 0;bottom: 4px;
+  color: rgba(0,0,0,.6);
+  font-family: Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  letter-spacing: .00937em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  transform-origin: left top;
+  transition: transform .15s cubic-bezier(.4,0,.2,1),color .15s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}

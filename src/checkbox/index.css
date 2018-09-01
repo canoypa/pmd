@@ -1,0 +1,34 @@
+.pmd-checkbox{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border-radius: 2px;
+  border: solid 2px #616161;
+  background-color: transparent;
+  outline: none;
+  transition: background-color .15s, border-color .15s;
+}
+.pmd-checkbox:checked {
+  border: solid 2px #FF5722;
+  background-color: #FF5722;
+}
+.pmd-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 36%;
+  height: 70%;
+  border: 2.4px solid #FFF;
+  border-top: none;
+  border-left: none;
+  transform-origin: 97% 86%;
+  box-sizing: content-box;
+  transform: scale(0) rotate(45deg);
+  transition: transform .1s ease-out;
+}
+.pmd-checkbox:checked::after {
+  transform: scale(1) rotate(45deg);
+}

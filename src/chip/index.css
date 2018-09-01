@@ -1,0 +1,83 @@
+.pmd-chip {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 4px;
+  height: 32px;
+  border-radius: calc(32px/2);
+  background-color: #EEEEEE;
+  font-size: 13px;
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+}
+.pmd-chip--dense {
+  margin: 4px 2px;
+  height: 26px;
+  border-radius: calc(26px/2);
+  font-size: 12px;
+}
+.pmd-chip:hover {
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.14), 0 2px 2px 0 rgba(0,0,0,.12), 0 1px 3px 0 rgba(0,0,0,.2);
+}
+.pmd-chip:active {
+  background-color: #E0E0E0;
+}
+.pmd-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: -4px;
+  border-radius: 50%;
+  background-color: #424242;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+.pmd-chip-dense .pmd-chip-icon {
+  width: 26px;
+  height: 26px;
+}
+.pmd-chip-text {
+  margin: 0 12px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+}
+.pmd-chip-dense .pmd-chip-text {
+  margin: 0 8px;
+  font-size: 12px;
+}
+.pmd-chip-clear {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px 0 -8px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.3);
+  color: #EEEEEE;
+}
+.pmd-chip-dense .pmd-chip-clear {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  margin-right: 4px;
+  background-color: transparent;
+  color: #757575;
+}
+.pmd-chip-clear:hover {
+  background-color: rgba(0,0,0,.5);
+}
+.pmd-chip-dense .pmd-chip-clear:hover {
+  background-color: transparent;
+  color: #424242;
+}
+.pmd-chip-clear{
+  font-size: 15px;
+}

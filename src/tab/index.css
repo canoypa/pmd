@@ -1,0 +1,45 @@
+.pmd-tab-bar{
+  width: 100%;
+}
+.pmd-tab-scroller{
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+}
+.pmd-tab-scroller::-webkit-scrollbar{
+  /* firefoxとedgeもけして～><*/
+    display: none;
+  }
+.pmd-tab-item{
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  box-sizing: content-box;
+  height: 48px;
+  max-width: 360px;
+  padding: 0 20px;
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+}
+.pmd-tab-item:hover{
+  background: rgba(0,0,0,.05);
+}
+.pmd-tab-item:not([aria-selected="true"]){
+  color: rgba(0,0,0,.5);
+}
+.pmd-tab-Indicator{
+  position: absolute;
+  right: var(--tab-Indicator-right);
+  left: var(--tab-Indicator-left);
+  bottom: 0;
+  height: 2px;
+  width: var(--tab-Indicator-width);
+  background: var(--colorBlue-500);
+  transition: left .25s, right .2s;
+  pointer-events: none;
+}
