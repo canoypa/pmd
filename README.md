@@ -1,5 +1,5 @@
 # PMD
-Personal Material Design.
+Personal Material Design??
 
 # Usage
 ~~~html
@@ -7,7 +7,7 @@ Personal Material Design.
     <!-- or -->
     <link rel="stylesheet" href="@/ripple/ripple.css">
     ...
-    <button id="sample-button" class="pmd-button"></button>
+    <button id="sample-button" class="pmd-button pmd-ripple"></button>
 ~~~
 
 js
