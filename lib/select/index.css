@@ -46,6 +46,6 @@
   pointer-events: none;
 }
 .pmd-select--hasvalue .pmd-floating-label, .pmd-select--focus .pmd-floating-label{
-  color: var(--colorDeepPurple-600);
+  color: #5E35B1;
   transform: translateY(-1em) scale(.75);
 }

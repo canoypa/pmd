@@ -39,7 +39,7 @@
   bottom: 0;
   height: 2px;
   width: var(--tab-Indicator-width);
-  background: var(--colorBlue-500);
+  background-color: #2196F3;
   transition: left .25s, right .2s;
   pointer-events: none;
 }
