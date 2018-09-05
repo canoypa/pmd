@@ -1,4 +1,4 @@
-.select{
+.pmd-select{
   display: inline-flex;
   position: relative;
   box-sizing: border-box;
@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: right 8px bottom 12px;
 }
-.select select{
+.pmd-select .pmd-select-control{
   color: rgba(0,0,0,.87);
   padding: 20px 26px 4px 0;
   font-family: Roboto,sans-serif;
@@ -30,17 +30,7 @@
   -moz-appearance: none;
   appearance: none;
 }
-.select:not(:hover) select{
-  border-bottom-color: rgba(0,0,0,.42);
-}
-.select.focus select{
-  border-bottom-color: rgba(98, 0, 238, 0.87);
-}
-.select.focus label, .select.hv label{
-  color: rgba(98, 0, 238, 0.87);
-  transform: translateY(-1em) scale(.75);
-}
-.select label{
+.pmd-select .pmd-floating-label{
   position: absolute;
   left: 0;bottom: 4px;
   color: rgba(0,0,0,.6);
@@ -54,4 +44,8 @@
   transform-origin: left top;
   transition: transform .15s cubic-bezier(.4,0,.2,1),color .15s cubic-bezier(.4,0,.2,1);
   pointer-events: none;
+}
+.pmd-select--hasvalue .pmd-floating-label, .pmd-select--focus .pmd-floating-label{
+  color: var(--colorDeepPurple-600);
+  transform: translateY(-1em) scale(.75);
 }

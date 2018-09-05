@@ -33,7 +33,7 @@
   justify-content: flex-end;
   order: 1;
 }
-.pmd-top-appbar-action-item,.pmd-top-appbar-navigation-icon{
+.pmd-top-appbar--navigation-icon, .pmd-top-appbar--action-item{
   display: flex;
   position: relative;
   flex-shrink: 0;
@@ -52,7 +52,7 @@
   cursor: pointer;
   border-radius: 50%;
 }
-.pmd-top-appbar-title{
+.pmd-top-appbar--title{
   font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 500;
@@ -69,7 +69,13 @@
   margin-top: 64px;
 }
 @media(max-width: 599px){
-  .pmd-top-appbar{height: 56px;}
-  .pmd-top-appbar-section{padding: 4px;}
-  .pmd-top-appbar--fixed-adjust{margin-top: 56px;}
+  .pmd-top-appbar{
+    height: 56px;
+  }
+  .pmd-top-appbar-section{
+    padding: 4px;
+  }
+  .pmd-top-appbar--fixed-adjust{
+    margin-top: 56px;
+  }
 }

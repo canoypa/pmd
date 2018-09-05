@@ -1,19 +1,18 @@
 .pmd-text-field-container{
+  display: inline-block;
   min-width: 200px;
 }
 .pmd-text-field{
-  display: inline-flex;
+  display: flex;
   position: relative;
   align-items: flex-end;
   box-sizing: border-box;
-  height: 48px;
-  margin: 16px 0 8px 0;
-  border-bottom-color: rgba(0,0,0,.12);
+  height: 56px;
+  margin: 10px 5px;
 }
 .pmd-text-field-input{
   width: 100%;
-  height: 30px;
-  padding: 20px 0 1px;
+  padding: 20px 6px 12px 6px;
   border: none;
   outline: none;
   font-size: 1rem;
@@ -23,12 +22,24 @@
   -moz-appearance: none;
   appearance: none;
 }
+.pmd-tooltip[aria-hidden="false"]{
+  transition: opacity .15s .4s, transform .2s .4s;
+}
 .pmd-floating-label{
   position: absolute;
-  bottom: 8px;
-  left: 0;
-  font-size: 1rem;
+  bottom: 12px;
+  left: 6px;
+  max-width: calc(100% - 48px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1em;
   color: rgba(0,0,0,.6);
   transition: transform .15s cubic-bezier(.4,0,.2,1),color .15s cubic-bezier(.4,0,.2,1),-webkit-transform .15s cubic-bezier(.4,0,.2,1);
+  transform-origin: 0 0;
   pointer-events: none;
+}
+.pmd-text-field--focus .pmd-floating-label, .pmd-text-field--hasvalue .pmd-floating-label{
+  color: var(--colorDeepPurple-600);
+  transform: translateY(-1em) scale(.75);
 }
