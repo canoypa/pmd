@@ -1,6 +1,8 @@
 # PMD
 Personal Material Design??
 
+[Demos](//cano-ypa.github.io/pmd-demo/)
+
 # Usage
 ~~~html
     <link rel="stylesheet" href="@/pmd.css">

@@ -1,5 +1,5 @@
 .pmd-card{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   margin: 4px;
   min-width: 300px;
