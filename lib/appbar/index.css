@@ -1,81 +1,74 @@
 .pmd-top-appbar{
+  display: flex;
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
-  height: 64px;
+  justify-content: space-between;
   background-color: #fff;
   color: #000;
   box-sizing: border-box;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
   z-index: 4;
 }
-.pmd-top-appbar.prominent{
-  height: 128px;
-}
-.pmd-top-appbar.fixed{
-  position: fixed;
-  top: 0;
-  width: 100%;
+.pmd-top-appbar--secondary{
+  padding-bottom: 64px;
 }
 .pmd-top-appbar-section{
   display: inline-flex;
-  flex: 1 1 auto;
   align-items: center;
   min-width: 0;
   padding: 8px 12px;
+  height: 64px;
+  box-sizing: border-box;
+}
+.pmd-top-appbar--prominent .pmd-top-appbar-section{
+  height: 128px;
+  align-items: flex-start;
 }
 .pmd-top-appbar-section--align-start{
   justify-content: flex-start;
-  order: -1;
+  order: 0;
+}
+.pmd-top-appbar-section--align-center{
+  justify-content: center;
+  flex: 1;
+  order: 1;
 }
 .pmd-top-appbar-section--align-end{
   justify-content: flex-end;
-  order: 1;
+  order: 2;
 }
-.pmd-top-appbar--navigation-icon, .pmd-top-appbar--action-item{
-  display: flex;
-  position: relative;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
+.pmd-top-appbar-section--secondary{
+  position: absolute;
+  bottom: 0;
   box-sizing: border-box;
-  width: 48px;
-  height: 48px;
-  padding: 12px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  fill: currentColor;
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 50%;
+  width: 100%;
 }
-.pmd-top-appbar--title{
+.pmd-top-appbar-title{
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin: 0;
+  padding-left: 16px;
   font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 500;
   letter-spacing: .0125em;
   text-decoration: inherit;
   text-transform: inherit;
-  padding-left: 20px;
-  padding-right: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.pmd-top-appbar--prominent .pmd-top-appbar-title{
+  font-size: 1.5em;
+  align-self: flex-end;
+}
+.pmd-top-appbar--prominent.pmd-top-appbar--scrolling .pmd-top-appbar-title{
+  font-size: 1.25em;
 }
 .pmd-top-appbar--fixed-adjust{
   margin-top: 64px;
 }
 @media(max-width: 599px){
-  .pmd-top-appbar{
-    height: 56px;
-  }
-  .pmd-top-appbar-section{
-    padding: 4px;
-  }
-  .pmd-top-appbar--fixed-adjust{
-    margin-top: 56px;
-  }
 }

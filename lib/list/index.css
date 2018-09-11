@@ -3,6 +3,12 @@
   margin: 0;
   list-style-type: none;
 }
+.pmd-list--avatar .pmd-list-item{
+  height: 56px;
+}
+.pmd-list--two-line .pmd-list-item{
+  height: 64px;
+}
 .pmd-list-item{
   display: flex;
   align-items: center;
@@ -19,6 +25,13 @@
   display: block;
   overflow: hidden;
 }
+.pmd-list-item-primary-text{
+
+}
+.pmd-list-item-secondary-text{
+  font-size: .875rem;
+  color: rgba(0,0,0,.54);
+}
 .pmd-list-item-icon{
   fill: rgba(0,0,0,.54);
   color: rgba(0,0,0,.54);
@@ -26,17 +39,28 @@
   width: 24px;
   height: 24px;
   box-sizing: border-box;
+  border-radius: 50%;
+  overflow: hidden;
   background: center/cover no-repeat;
 }
-.pmd-list-avatar .pmd-list-item-icon{
+.pmd-list--avatar .pmd-list-item-icon{
   width: 40px;
   height: 40px;
   margin-right: 16px;
   border-radius: 50%;
 }
+.pmd-list-item-icon img{
+  width: 100%;
+  height: 100%;
+}
+
 .pmd-list-item-action{
   margin-left: auto;
   margin-right: 0;
   color: rgba(0,0,0,.38);
   cursor: pointer;
+}
+.pmd-list-item-action svg{
+  width: 24px;
+  height: 24px;
 }

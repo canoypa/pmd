@@ -18,8 +18,8 @@
 }
 
 .pmd-button-flat{
-  margin: 8px 4px;
-  padding: 0 12px;
+  margin: 4px;
+  padding: 0 8px;
   height: 36px;
   min-width: 64px;
   border-radius: 2px;
@@ -109,6 +109,8 @@
   padding: 12px;
   border-radius: 50%;
   background-color: transparent;
+  color: #666;
+  fill: #666;
   font-size: 24px;
 }
 .pmd-button-icon.pmd-button-dence{
@@ -152,4 +154,9 @@
 
 .pmd-button--icon {
   margin-right: 8px;
+}
+
+.pmd-button svg{
+  width: 1em;
+  height: 1em;
 }

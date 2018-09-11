@@ -1,8 +1,7 @@
 .pmd-card{
-  display: inline-flex;
-  flex-direction: column;
+  display: inline-block;
   margin: 4px;
-  min-width: 300px;
+  min-width: 320px;
   max-width: 100%;
   border-radius: 2px;
   background-color: #fff;
@@ -13,24 +12,45 @@
 .pmd-card:hover{
   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
 }
-.pmd-card-primary-actions{
-  position: relative;
+
+.pmd-card-primary-header{
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
-.pmd-card-primary-actions:hover{
-  background-color: #eee;
+
+.pmd-card--row>.pmd-card-primary-action{
+  display: flex;
+  flex-direction: row;
 }
+
 .pmd-card-media{
-  min-height: 150px;
-  min-width: 150px;
+  min-height: 170px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: rgba(0,0,0,.2);
 }
+.pmd-card--row .pmd-card-media{
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.pmd-card-media--dence{
+  min-height: 80px;
+  min-width: 80px;
+  margin: 16px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,.2);
+}
+
 .pmd-card-media-icon{
   height: 40px;
   width: 40px;
-  margin: 0 1em;
   border-radius: 50%;
   background-size: cover;
   background-position: center center;
@@ -38,27 +58,32 @@
   background-color: rgba(0,0,0,.2);
 }
 .pmd-card-primary{
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  padding-right: 24px;
+  flex: 1;
+  padding: 16px 0 16px 16px;
 }
 .pmd-card-title{
   margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 .pmd-card-subtitle{
-  font-size: 14px;
-  color: rgba(0,0,0,.76);
-}
-.pmd-card-supporting{
-  font-size: 14px;
-  color: rgba(0,0,0,.76);
+  margin-top: 2px;
+  font-size: .8em;
+  color: rgba(0,0,0,.65);
 }
 .pmd-card-body{
-  padding: 0 16px 8px;
+  padding: 16px;
+  color: rgba(0,0,0,.76);
 }
+.pmd-card-primary+.pmd-card-body{
+  padding-top: 0;
+}
+
 .pmd-card-actions{
-  padding: 8px;
+  display: flex;
+  margin: 0 4px;
+  justify-content: flex-end;
   border-top: 1px solid #e0e0e0;
 }
 
