@@ -1,6 +1,7 @@
 .pmd-ripple{
   will-change: transform,opacity;
   overflow: hidden;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 .pmd-ripple:after{
   content: '';
@@ -18,10 +19,10 @@
   background-color: #9E9E9E;
 }
 .pmd-ripple.pmd-ripple--active::after{
-  animation: pmd-ripple-in .35s cubic-bezier(.4,0,.2,1) forwards;
+  animation: pmd-ripple-in .3s cubic-bezier(.1,.7,.3,1) forwards;
 }
 .pmd-ripple.pmd-ripple--remove::after{
-  animation: pmd-ripple-out .225s ease-out;
+  animation: pmd-ripple-out .3s ease-out;
 }
 
 @keyframes pmd-ripple-in{
