@@ -1,5 +1,5 @@
 .pmd-list{
-  padding: 0;
+  padding: 12px 0;
   margin: 0;
   list-style-type: none;
 }
@@ -9,7 +9,9 @@
 .pmd-list--two-line .pmd-list-item{
   height: 64px;
 }
+
 .pmd-list-item{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -18,20 +20,28 @@
   color: #616161;
   overflow: hidden;
 }
-.pmd-list-item:hover{
-  background-color: #F5F5F5;
+.pmd-list-item::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+.pmd-list-item:hover::after{
+  background-color: rgba(0,0,0,.05);
+}
+
 .pmd-list-item-primary{
   display: block;
   overflow: hidden;
 }
-.pmd-list-item-primary-text{
 
-}
 .pmd-list-item-secondary-text{
   font-size: .875rem;
   color: rgba(0,0,0,.54);
 }
+
 .pmd-list-item-icon{
   fill: rgba(0,0,0,.54);
   color: rgba(0,0,0,.54);

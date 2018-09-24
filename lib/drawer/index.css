@@ -6,9 +6,7 @@
   z-index: 1000;
   pointer-events: none;
 }
-.pmd-drawer-header--dence{
-  padding: 16px;
-}
+
 .pmd-drawer-drawer{
   position: absolute;
   right: auto;
@@ -20,6 +18,26 @@
   transform: translateX(calc(-100% - 20px));
   transition: transform .35s cubic-bezier(0.24,1,0.32,1);
 }
+
+.pmd-drawer-header{
+  padding: 16px 16px 0;
+}
+.pmd-drawer-header--dence{
+  padding: 16px;
+}
+.pmd-drawer-header-title{
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.pmd-drawer-header-subtitle{
+  font-size: .9em;
+  color: #757575;
+}
+
+.pmd-drawer-content{
+  padding: 0 8px;
+}
+
 .pmd-drawer-nav{
   border-bottom: 1px solid #E0E0E0;
   padding: 12px 0;

@@ -70,5 +70,14 @@
 .pmd-top-appbar--fixed-adjust{
   margin-top: 64px;
 }
+
 @media(max-width: 599px){
+  .pmd-top-appbar-section--align-center{
+    justify-content: flex-end;
+  }
+}
+@media(max-width: 340px){
+  .pmd-top-appbar-section--align-center,.pmd-top-appbar-section--align-end{
+    display: none;
+  }
 }

@@ -8,7 +8,8 @@
   background-repeat: no-repeat;
   background-position: right 8px bottom 12px;
 }
-.pmd-select .pmd-select-control{
+
+.pmd-select-control{
   color: rgba(0,0,0,.87);
   padding: 20px 26px 4px 0;
   font-family: Roboto,sans-serif;
@@ -30,14 +31,14 @@
   -moz-appearance: none;
   appearance: none;
 }
+
 .pmd-select .pmd-floating-label{
   position: absolute;
   left: 0;
-  bottom: 3px;
+  bottom: 8px;
   color: rgba(0,0,0,.6);
   font-family: Roboto,sans-serif;
   font-size: 1rem;
-  line-height: 1.75rem;
   font-weight: 400;
   letter-spacing: .00937em;
   text-decoration: inherit;
@@ -49,4 +50,18 @@
 .pmd-select--hasvalue .pmd-floating-label, .pmd-select--focus .pmd-floating-label{
   color: #5E35B1;
   transform: translateY(-1em) scale(.75);
+}
+
+.pmd-select .pmd-line-ripple{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform .15s cubic-bezier(.4,0,.2,1);
+}
+.pmd-select .pmd-line-ripple--active{
+  background-color: #5E35B1;
+  transform: scaleX(1);
 }
