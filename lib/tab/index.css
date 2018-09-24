@@ -54,6 +54,12 @@
   pointer-events: none;
 }
 
+@media(max-width: 599px){
+  .pmd-tab-item{
+    min-width: 80px;
+  }
+}
+
 @keyframes pmd-tab-scroll{
   from{
     transform: translateX(0);
