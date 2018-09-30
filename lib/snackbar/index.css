@@ -2,37 +2,75 @@
   display: flex;
   align-items: center;
   position: fixed;
-  bottom: 10px;
-  left: 10px;
-  min-width: 288px;
+  bottom: 16px;
+  left: 16px;
+  min-width: 344px;
   box-sizing: border-box;
   height: 48px;
-  padding: 0 24px;
-  border-radius: 2px;
-  background-color: #323232;
+  padding: 6px 8px 6px 16px;
+  border-radius: 4px;
+  background-color: #000000dd;
   font-size: 14px;
   color: #fff;
-  transform: translateY(150%);
   z-index: 4000;
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 2px 0 rgba(0,0,0,.2);
-  transition: transform .35s cubic-bezier(0.24,1,0.32,1);
+  transform: translateY(150%);
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
   user-select: none;
 }
-@media(max-width:640px){
+.pmd-snackbar-active{
+  animation: pmd-snackbar-in .4s cubic-bezier(0.24,1,0.32,1) forwards;
+}
+.pmd-snackbar-deactive{
+  animation: pmd-snackbar-out .4s cubic-bezier(0.24,1,0.32,1) forwards;
+}
+
+.pmd-snackbar-text{
+  flex: 1;
+  color: #ffffffde;
+}
+
+.pmd-snackbar-action-button{
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  min-width: 48px;
+  height: 36px;
+  margin-left: 8px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+  font: 14px 'Roboto','Arial',sans-serif;
+  color: #90A4AE;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media(max-width: 599px){
   .pmd-snackbar{
     bottom: 0;
     right: 0;
     left: 0;
   }
 }
-.pmd-snackbar-active{
-  transform: translateY(0);
+
+@keyframes pmd-snackbar-in{
+  0%{
+    transform: translateY(150%);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
-.pmd-snackbar-text{
-  flex: 1;
+@keyframes pmd-snackbar-out{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(150%);
+  }
 }
-.pmd-snackbar-action-button{
-  padding: 0 10px;
-  line-height: 2.25rem;
-  color: #78909C;
-}
+
