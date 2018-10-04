@@ -5,9 +5,10 @@
   bottom: 16px;
   left: 16px;
   min-width: 344px;
+  max-width: 600px;
   box-sizing: border-box;
-  height: 48px;
-  padding: 6px 8px 6px 16px;
+  min-height: 48px;
+  padding: 6px 24px;
   border-radius: 4px;
   background-color: #000000dd;
   font-size: 14px;
@@ -26,27 +27,24 @@
 
 .pmd-snackbar-text{
   flex: 1;
+  margin-right: 24px;
   color: #ffffffde;
 }
 
 .pmd-snackbar-action-button{
-  display: inline-flex;
-  align-items: baseline;
-  justify-content: center;
-  min-width: 48px;
+  min-width: 4em;
   height: 36px;
-  margin-left: 8px;
-  padding: 0 8px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   border: none;
   outline: none;
   background-color: transparent;
-  text-align: center;
+  text-align: end;
   font: 14px 'Roboto','Arial',sans-serif;
   color: #90A4AE;
   text-transform: uppercase;
   cursor: pointer;
-  user-select: none;
 }
 
 @media(max-width: 599px){
@@ -54,6 +52,8 @@
     bottom: 0;
     right: 0;
     left: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
