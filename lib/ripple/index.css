@@ -19,10 +19,10 @@
   background-color: #9E9E9E;
 }
 .pmd-ripple.pmd-ripple--active::after{
-  animation: pmd-ripple-in .35s cubic-bezier(.1,.6,.3,1) forwards;
+  animation: pmd-ripple-in .3s cubic-bezier(.2,.7,.3,.9) forwards;
 }
 .pmd-ripple.pmd-ripple--remove::after{
-  animation: pmd-ripple-out .4s ease-out;
+  animation: pmd-ripple-out .5s ease;
 }
 
 @keyframes pmd-ripple-in{
