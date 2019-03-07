@@ -1,4 +1,4 @@
-# Padeal Material Desgin
+# PMD
 
 個人的に理想的
 
@@ -6,8 +6,10 @@
 
 # Usage
 
+html
+
 ```html
-<link rel="stylesheet" href="@/pmd.css">
+<link rel="stylesheet" href="@/pmd.css" />
 ...
 <button id="sample-button" class="pmd-button pmd-ripple"></button>
 ```
@@ -17,10 +19,5 @@ js
 ```javascript
 import * as pmd from '@/pmd.js';
 
-const ripple = new pmd.ripple(document.querySelector('#sample-button'));
-
-//or
-import { ripple as pmd } from '@/pmd.js';
-
-const ripple = new ripple(document.querySelector('#sample-button'));
+const ripple = new pmd.ripple(document.getElementById('#sample-button'));
 ```
