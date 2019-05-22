@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/lib/pmd.css" />
+  </head>
+  <body>
+    <div>
+      <div id="dev-checkbox" class="pmd-checkbox">
+        <input name="dev-checkbox" type="checkbox" />
+        <div class="pmd-checkbox-background">
+          <svg class="pmd-checkbox-checkmark" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="pmd-radio">
+        <input type="radio" name="dev-radio" checked />
+        <div class="pmd-radio-background">
+          <div class="pmd-radio-checkmark"></div>
+        </div>
+      </div>
+      <div class="pmd-radio">
+        <input type="radio" name="dev-radio" />
+        <div class="pmd-radio-background">
+          <div class="pmd-radio-checkmark"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div name="dev-switch" checked class="pmd-switch"></div>
+      <div name="dev-switch" class="pmd-switch"></div>
+    </div>
+
+    <script type="module" defer>
+      import * as pmd from '/lib/pmd.js';
+
+      const checkbox = new pmd.checkbox(document.getElementById('dev-checkbox'));
+
+      for (let e of document.getElementsByClassName('pmd-radio')) {
+        new pmd.radio(e);
+      }
+
+      for (let e of document.getElementsByClassName('pmd-switch')) {
+        e.addEventListener('click', ev => {
+          e.hasAttribute('checked') ? e.removeAttribute('checked') : e.setAttribute('checked', '');
+        });
+      }
+    </script>
+  </body>
+</html>

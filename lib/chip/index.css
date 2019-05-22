@@ -3,21 +3,19 @@
   display: inline-flex;
   align-items: center;
   height: 32px;
-  margin: 4px;
-  padding: 8px;
+  margin: 2px;
+  padding: 4px;
   box-sizing: border-box;
   border-radius: 16px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   font-size: 13px;
+  vertical-align: middle;
   overflow: hidden;
   cursor: pointer;
   user-select: none;
 }
-.pmd-chip--outline{
-  background-color: #fff;
-  border: 1px solid #bbb;
-}
-.pmd-chip::before {
+
+.pmd-chip::after {
   content: '';
   position: absolute;
   top: 0;
@@ -25,46 +23,44 @@
   width: 100%;
   height: 100%;
 }
-.pmd-chip:hover::before {
-  background-color: #000;
-  opacity: .05;
+.pmd-chip:not([disabled]):hover::after {
+  background-color: rgba(0, 0, 0, 0.04);
 }
-.pmd-chip:active::before {
-  background-color: #000;
-  opacity: .1;
+.pmd-chip:not([disabled]):active::after {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.pmd-chip.outline {
+  padding: 3px;
+  background-color: #fff;
+  border: 1px solid #bbb;
 }
 
 .pmd-chip-text {
+  padding: 0 8px;
   color: rgba(0, 0, 0, 0.87);
   font-size: 13px;
 }
 
-.pmd-chip-icon, .pmd-chip-action{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
+.pmd-chip-icon,
+.pmd-chip-action {
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-  color: rgba(0,0,0,.6);
-  fill: rgba(0,0,0,.6);
-  font-size: 8px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  fill: rgba(0, 0, 0, 0.6);
 }
+
 .pmd-chip-icon {
-  margin-right: 8px;
+  margin-left: 4px;
 }
 .pmd-chip-action {
   position: relative;
+  margin-right: 4px;
   overflow: hidden;
-  margin-left: 8px;
 }
-.pmd-chip-icon svg, .pmd-chip-action svg{
-  height: 18px;
-}
-.pmd-chip-action::before {
+.pmd-chip-action::after {
   content: '';
   position: absolute;
   top: 0;
@@ -72,11 +68,9 @@
   width: 100%;
   height: 100%;
 }
-.pmd-chip-action:hover::before {
-  background-color: #000;
-  opacity: .08;
+.pmd-chip-action:not([disabled]):hover::after {
+  background-color: rgba(0, 0, 0, 0.04);
 }
-.pmd-chip-action:active::before {
-  background-color: #000;
-  opacity: .1;
+.pmd-chip-action:not([disabled]):active::after {
+  background-color: rgba(0, 0, 0, 0.12);
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>nav</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Roboto|Material+Icons" />
+    <link rel="stylesheet" href="/lib/pmd.css" />
+  </head>
+  <body style="margin: 0;">
+    <div id="pos" style="position: fixed; width: 100vw; height: 100vh; pointer-events: none;"></div>
+    <button id="open">OPEN</button>
+    <div id="test-nav" class="pmd-drawer">
+      <header class="pmd-drawer-header">
+        <div class="pmd-drawer-title">Title</div>
+        <div class="pmd-drawer-subtitle">Sub Title</div>
+      </header>
+      <div class="pmd-drawer-nav">
+        <div class="pmd-list-divider"></div>
+        <nav class="pmd-list">
+          <a class="pmd-list-item" href="#" aria-selected="true">
+            <i class="material-icons pmd-list-item-icon" aria-hidden="true">inbox</i>
+            <span class="mdc-list-item-text">Inbox</span>
+          </a>
+          <a class="pmd-list-item" href="#">
+            <i class="material-icons pmd-list-item-icon" aria-hidden="true">send</i>
+            <span class="pmd-list-item-text">Outgoing</span>
+          </a>
+          <a class="pmd-list-item" href="#">
+            <i class="material-icons pmd-list-item-icon" aria-hidden="true">drafts</i>
+            <span class="pmd-list-item-text">Drafts</span>
+          </a>
+        </nav>
+        <div class="pmd-list-divider"></div>
+        <nav class="pmd-list">
+          <div class="pmd-list-label">ラベル</div>
+          <a class="pmd-list-item" href="#" aria-selected="true">
+            <i class="material-icons pmd-list-item-icon" aria-hidden="true">inbox</i>
+            <span class="mdc-list-item-text">Inbox</span>
+          </a>
+          <a class="pmd-list-item" href="#">
+            <i class="material-icons pmd-list-item-icon" aria-hidden="true">send</i>
+            <span class="pmd-list-item-text">Outgoing</span>
+          </a>
+          <a class="pmd-list-item" href="#">
+            <i class="material-icons pmd-list-item-icon" aria-hidden="true">drafts</i>
+            <span class="pmd-list-item-text">Drafts</span>
+          </a>
+        </nav>
+        <div class="pmd-list-divider"></div>
+      </div>
+      <div class="pmd-drawer-footer">
+        <div class="pmd-drawer-footer-item">youtube</div>
+        <div class="pmd-drawer-footer-item">nanikore</div>
+      </div>
+    </div>
+    <div class="pmd-scrim"></div>
+    <script type="module" async>
+      import * as pmd from '/lib/pmd.js';
+
+      const drawer = new pmd.drawer(document.getElementById('test-nav'));
+
+      document.getElementById('open').addEventListener('click', e => drawer.open());
+    </script>
+  </body>
+</html>

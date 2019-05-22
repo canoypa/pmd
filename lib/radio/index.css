@@ -1,0 +1,58 @@
+.pmd-radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  cursor: pointer;
+}
+.pmd-radio::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.pmd-radio:hover::after {
+  background-color: rgb(1, 135, 134, 0.1);
+}
+
+.pmd-radio input[type='radio'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  margin: 0;
+}
+
+.pmd-radio-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #616161;
+  background-color: transparent;
+}
+.pmd-radio.checked .pmd-radio-background {
+  border-color: #018786;
+}
+
+.pmd-radio-checkmark {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #018786;
+  transform: scale(0);
+  transition: transform 0.1s ease-out;
+}
+.pmd-radio.checked .pmd-radio-checkmark {
+  transform: scale(1);
+}

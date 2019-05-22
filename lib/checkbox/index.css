@@ -1,34 +1,64 @@
-.pmd-checkbox{
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+.pmd-checkbox {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  cursor: pointer;
+}
+.pmd-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.pmd-checkbox:hover::after {
+  background-color: rgba(1, 135, 134, 0.102);
+}
+
+.pmd-checkbox input[type='checkbox'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  margin: 0;
+}
+
+.pmd-checkbox-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
-  margin: 0;
   border-radius: 2px;
   border: solid 2px #616161;
   background-color: transparent;
-  outline: none;
-  transition: background-color .15s, border-color .15s;
+  transition-property: border-color, background-color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
 }
-.pmd-checkbox:checked {
-  border: solid 2px #FF5722;
-  background-color: #FF5722;
+.pmd-checkbox.checked .pmd-checkbox-background {
+  border-color: #018786;
+  background-color: #018786;
 }
-.pmd-checkbox::after {
-  content: "";
+
+.pmd-checkbox-checkmark {
   position: absolute;
-  width: 36%;
-  height: 70%;
-  border: 2.4px solid #FFF;
-  border-top: none;
-  border-left: none;
-  transform-origin: 97% 86%;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
   box-sizing: content-box;
-  transform: scale(0) rotate(45deg);
-  transition: transform .1s ease-out;
+  transform: scale(0);
+  transition: transform 0.1s ease-out;
 }
-.pmd-checkbox:checked::after {
-  transform: scale(1) rotate(45deg);
+.pmd-checkbox.checked .pmd-checkbox-checkmark {
+  transform: scale(1);
 }

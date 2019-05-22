@@ -1,4 +1,4 @@
-.pmd-snackbar{
+.pmd-snackbar {
   display: flex;
   align-items: center;
   position: fixed;
@@ -15,23 +15,23 @@
   color: #fff;
   z-index: 4000;
   transform: translateY(150%);
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   user-select: none;
 }
-.pmd-snackbar-active{
-  animation: pmd-snackbar-in .4s cubic-bezier(0.24,1,0.32,1) forwards;
+.pmd-snackbar-active {
+  animation: pmd-snackbar-in 0.25s cubic-bezier(0.2, 0.8, 0.5, 0.9) forwards;
 }
-.pmd-snackbar-deactive{
-  animation: pmd-snackbar-out .4s cubic-bezier(0.24,1,0.32,1) forwards;
+.pmd-snackbar-deactive {
+  animation: pmd-snackbar-out 0.25s cubic-bezier(0.3, 0.6, 0.6, 0.9) forwards;
 }
 
-.pmd-snackbar-text{
+.pmd-snackbar-text {
   flex: 1;
   margin-right: 24px;
   color: #ffffffde;
 }
 
-.pmd-snackbar-action-button{
+.pmd-snackbar-action-button {
   min-width: 4em;
   height: 36px;
   margin: 0;
@@ -41,14 +41,14 @@
   outline: none;
   background-color: transparent;
   text-align: end;
-  font: 14px 'Roboto','Arial',sans-serif;
-  color: #90A4AE;
+  font: 14px 'Roboto', 'Arial', sans-serif;
+  color: #90a4ae;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-@media(max-width: 599px){
-  .pmd-snackbar{
+@media (max-width: 599px) {
+  .pmd-snackbar {
     bottom: 0;
     right: 0;
     left: 0;
@@ -57,20 +57,19 @@
   }
 }
 
-@keyframes pmd-snackbar-in{
-  0%{
+@keyframes pmd-snackbar-in {
+  0% {
     transform: translateY(150%);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
-@keyframes pmd-snackbar-out{
-  0%{
+@keyframes pmd-snackbar-out {
+  0% {
     transform: translateY(0);
   }
-  100%{
+  100% {
     transform: translateY(150%);
   }
 }
-

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu - pmd Demo</title>
+    <link rel="stylesheet" href="/lib/pmd.css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Roboto|Material+Icons" />
+  </head>
+  <body>
+    <button class="show-menu pmd-button icon material-icons" style="position: fixed; top:0;left:0;">more_vert</button>
+    <button class="show-menu pmd-button icon material-icons" style="position: fixed; top:0;right:0;">more_vert</button>
+    <button class="show-menu pmd-button icon material-icons" style="position: fixed; bottom:0;left:0;">more_vert</button>
+    <button class="show-menu pmd-button icon material-icons" style="position: fixed; bottom:0;right:0;">more_vert</button>
+    <script defer type="module">
+      import * as pmd from '/lib/pmd.js';
+
+      const buttons = document.querySelectorAll('.show-menu');
+
+      for (let b of buttons) {
+        b.addEventListener('click', () => {
+          const menu = new pmd.menu(b);
+          menu
+            .setItem({ title: '興味なし' })
+            .setItem({ title: '[後で見る]に保存' })
+            .setItem({ title: '再生リストに保存' })
+            .setItem({ title: '共有' })
+            .setItem({ title: '報告' });
+
+          menu.show();
+        });
+      }
+    </script>
+  </body>
+</html>

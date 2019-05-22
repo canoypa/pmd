@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/lib/pmd.css" />
+  </head>
+  <body>
+    <button id="show" class="pmd-button icon material-icons">bookmark</button>
+    <script type="module" defer>
+      import * as pmd from '/lib/pmd.js';
+      const s = new pmd.snackbar();
+
+      document.getElementById('show').addEventListener('click', e => {
+        s.set({ title: 'Hello World!!', actions: [{ title: 'cancel' }, { title: 'OK' }] });
+        s.show();
+      });
+
+      s.addEventListener('pmd.snackbar:actionClick', e => {
+        console.log(e);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+.pmd-menu {
+  position: absolute;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: none;
+  z-index: 8000;
+  transition: opacity 0.25s ease-out;
+}
+.pmd-menu-container.active .pmd-menu {
+  display: block;
+  animation: pmd-menu-show 0.2s cubic-bezier(0, 0.7, 0.3, 0.9) forwards;
+  transform-origin: center center;
+}
+.pmd-menu-container.deactive .pmd-menu {
+  animation: pmd-menu-hide 0.2s cubic-bezier(0, 0.8, 0.3, 1) forwards;
+}
+
+.pmd-menu-list {
+  max-width: 280px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  list-style-type: none;
+}
+
+.pmd-menu-list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+  height: 46px;
+  color: #000;
+  cursor: pointer;
+}
+.pmd-menu-list-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pmd-menu-list-item:hover::after {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.pmd-menu-back {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  z-index: 7000;
+}
+.pmd-menu-container.active .pmd-menu-back {
+  display: block;
+}
+
+.pmd-menu-surface--anchor {
+  position: relative;
+}
+
+@keyframes pmd-menu-show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pmd-menu-hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/lib/pmd.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <div class="pmd-appbar">
+      <section class="pmd-appbar-section pmd-top-appbar-section--align-start">
+        <button class="pmd-button icon material-icons">menu</button>
+        <h6 class="pmd-top-appbar-title">TITLE</h6>
+      </section>
+      <section class="pmd-appbar-section pmd-top-appbar-section--align-center">
+        <div class="pmd-search-view" style="background-color: #eee;">
+                <div class="pmd-search-view-navigation-icon material-icons">search</div>
+                <input class="pmd-search-view-input"></input>
+                <div class="pmd-search-view-action-icon material-icons">clear</div>
+        </div>
+      </section>
+      <section class="pmd-appbar-section pmd-top-appbar-section--align-end">
+        <button class="pmd-button icon material-icons">bookmark</button>
+      </section>
+    </div>
+    <script type="module" defer>
+      import * as pmd from '/lib/pmd.js';
+    </script>
+  </body>
+</html>

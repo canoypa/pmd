@@ -1,15 +1,21 @@
-.pmd-tab-bar{
+.pmd-tab-bar {
   width: 100%;
   overflow-x: scroll;
 }
-.pmd-tab-scroller{
+
+.pmd-tab-scroller {
   position: relative;
   display: flex;
+  transition: transform 0.25s cubic-bezier(0.2, 0.2, 0.1, 0.9);
 }
-.pmd-tab-bar::-webkit-scrollbar{
-    display: none;
-  }
-.pmd-tab-item{
+.pmd-tab-scroller.pmd-tab-scrolling {
+  transform: translateX(var(--pmd-tab-scroll-end));
+}
+
+.pmd-tab-bar::-webkit-scrollbar {
+  display: none;
+}
+.pmd-tab-item {
   position: relative;
   display: flex;
   flex: 1 0 auto;
@@ -26,9 +32,9 @@
   white-space: nowrap;
   outline: none;
   cursor: pointer;
-  transition: color .1s ease-out;
+  transition: color 0.1s ease-out;
 }
-.pmd-tab-item::before{
+.pmd-tab-item::before {
   content: '';
   position: absolute;
   top: 0;
@@ -36,35 +42,36 @@
   width: 100%;
   height: 100%;
 }
-.pmd-tab-item:hover::before,.pmd-tab-item:focus::before{
-  background: rgba(0,0,0,.03);
+.pmd-tab-item:hover::before,
+.pmd-tab-item:focus::before {
+  background: rgba(0, 0, 0, 0.03);
 }
-.pmd-tab-item:not([aria-selected="true"]){
-  color: rgba(0,0,0,.5);
+.pmd-tab-item:not([aria-selected='true']) {
+  color: rgba(0, 0, 0, 0.5);
 }
-.pmd-tab-Indicator{
+.pmd-tab-indicator {
   position: absolute;
-  right: var(--tab-Indicator-right);
-  left: var(--tab-Indicator-left);
   bottom: 0;
   height: 2px;
-  width: var(--tab-Indicator-width);
-  background-color: #2196F3;
-  transition: left .25s, right .2s;
+  width: var(--pmd-tab-indicator-width);
+  background-color: #2196f3;
+  transition: transform 0.25s ease-out;
   pointer-events: none;
 }
-
-@media(max-width: 599px){
-  .pmd-tab-item{
+.pmd-tab-indicator.pmd-indicator-active {
+  transform: translateX(var(--pmd-tab-indicator-end, 0));
+}
+@media (max-width: 599px) {
+  .pmd-tab-item {
     min-width: 80px;
   }
 }
 
-@keyframes pmd-tab-scroll{
-  from{
+@keyframes pmd-tab-scroll {
+  from {
     transform: translateX(0);
   }
-  to{
-    transform: translateX(var(--pmd-tab-scroll-end,0));
+  to {
+    transform: translateX(var(--pmd-tab-scroll-end, 0));
   }
 }
