@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snackbar - pmd Demo</title>
+    <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+    <main class="root">
+        <h1 id="component-name">Snackbar</h1>
+        <div class="demo-area">
+            <div class="demo-content">
+                <div id="demo-snackbar" class="pmd-snackbar">
+                    <div class="pmd-snackbar-text">Massage</div>
+                    <button class="pmd-snackbar-action-button">undo</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div id="demo-snackber-message" class="pmd-text-field-container">
+                    <div class="pmd-text-field pmd-text-field--dence">
+                        <input type="text" class="pmd-text-field-input">
+                        <label class="pmd-floating-label">Massage</label>
+                        <div class="pmd-line-ripple"></div>
+                    </div>
+                </div>
+                <div id="demo-snackber-action-text" class="pmd-text-field-container">
+                    <div class="pmd-text-field pmd-text-field--dence">
+                        <input type="text" class="pmd-text-field-input">
+                        <label class="pmd-floating-label">Action text</label>
+                        <div class="pmd-line-ripple"></div>
+                    </div>
+                </div>
+            </div>
+            <button id="show-snackbar" class="pmd-button pmd-button-contained">show snackbar</button>
+        </div>
+    </main>
+    <div id="demo-snackbar-main" class="pmd-snackbar">
+        <div class="pmd-snackbar-text">snackbar</div>
+        <button class="pmd-snackbar-action-button">ok</button>
+    </div>
+    <script defer type="module" src="./index.js"></script>
+</body>
+</html>

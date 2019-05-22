@@ -1,26 +1,28 @@
-.pmd-list{
+.pmd-list {
   padding: 12px 0;
   margin: 0;
+  background-color: #fff;
   list-style-type: none;
 }
-.pmd-list--avatar .pmd-list-item{
+.pmd-list--avatar .pmd-list-item {
   height: 56px;
 }
-.pmd-list--two-line .pmd-list-item{
+.pmd-list--two-line .pmd-list-item {
   height: 64px;
 }
 
-.pmd-list-item{
+.pmd-list-item {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  min-width: 80px;
   padding: 0 16px;
   height: 48px;
   color: #616161;
-  overflow: hidden;
+  cursor: pointer;
 }
-.pmd-list-item::after{
+.pmd-list-item::after {
   content: '';
   position: absolute;
   top: 0;
@@ -28,23 +30,23 @@
   width: 100%;
   height: 100%;
 }
-.pmd-list-item:hover::after{
-  background-color: rgba(0,0,0,.05);
+.pmd-list-item:hover::after {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.pmd-list-item-primary{
+.pmd-list-item-primary {
   display: block;
   overflow: hidden;
 }
 
-.pmd-list-item-secondary-text{
-  font-size: .875rem;
-  color: rgba(0,0,0,.54);
+.pmd-list-item-secondary-text {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.54);
 }
 
-.pmd-list-item-icon{
-  fill: rgba(0,0,0,.54);
-  color: rgba(0,0,0,.54);
+.pmd-list-item-icon {
+  fill: rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0.54);
   margin-right: 32px;
   width: 24px;
   height: 24px;
@@ -53,24 +55,24 @@
   overflow: hidden;
   background: center/cover no-repeat;
 }
-.pmd-list--avatar .pmd-list-item-icon{
+.pmd-list--avatar .pmd-list-item-icon {
   width: 40px;
   height: 40px;
   margin-right: 16px;
   border-radius: 50%;
 }
-.pmd-list-item-icon img{
+.pmd-list-item-icon img {
   width: 100%;
   height: 100%;
 }
 
-.pmd-list-item-action{
+.pmd-list-item-action {
   margin-left: auto;
   margin-right: 0;
-  color: rgba(0,0,0,.38);
+  color: rgba(0, 0, 0, 0.38);
   cursor: pointer;
 }
-.pmd-list-item-action svg{
+.pmd-list-item-action svg {
   width: 24px;
   height: 24px;
 }

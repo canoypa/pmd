@@ -1,56 +1,57 @@
-.pmd-dialog{
+.pmd-dialog {
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 0;bottom: 0;
-  right: 0;left: 0;
-  background-color: rgba(0,0,0,.32);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.32);
   z-index: 1000;
 }
-.pmd-dialog-dialog{
+.pmd-dialog-dialog {
   max-width: 865px;
   width: calc(100% - 2rem);
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12), 0 11px 15px 0 rgba(0,0,0,.2);
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px 0 rgba(0, 0, 0, 0.2);
 }
-.pmd-dialog-header{
+.pmd-dialog-header {
   display: flex;
   align-content: center;
   padding: 24px 24px 0;
 }
-.pmd-dialog-title{
+.pmd-dialog-title {
   margin: 0;
   flex: 1 1;
   font-size: 1.25rem;
-  color: rgba(0,0,0,.87);
+  color: rgba(0, 0, 0, 0.87);
 }
-.pmd-dialog-body{
+.pmd-dialog-body {
   color: #616161;
   font-size: 1rem;
   margin-top: 20px;
   padding: 0 24px 24px;
 }
-.pmd-dialog-body--scrollable{
+.pmd-dialog-body--scrollable {
   max-height: 195px;
-  border-top: 1px solid rgba(0,0,0,.1);
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
 }
-.pmd-dialog-footer{
+.pmd-dialog-footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   padding: 8px;
 }
-.pmd-dialog-buttons{
+.pmd-dialog-buttons {
   min-height: 52px;
   padding: 0 4px;
-  float: right;
 }
-.pmd-dialog-buttons button{
+.pmd-dialog-buttons button {
   font-size: 14px;
-  color: #232F34;
+  color: #232f34;
 }

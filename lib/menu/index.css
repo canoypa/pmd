@@ -1,0 +1,98 @@
+.pmd-menu {
+  position: absolute;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 8000;
+  transition: opacity 0.25s ease-out;
+}
+.pmd-menu-active .pmd-menu {
+  visibility: visible;
+  pointer-events: auto;
+  animation: pmd-menu-show 0.3s cubic-bezier(0, 0.7, 0.5, 0.9) forwards;
+  transform-origin: 0 0;
+}
+.pmd-menu-deactive .pmd-menu {
+  opacity: 0;
+}
+
+.pmd-menu-list {
+  min-width: 120px;
+  max-width: 280px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  list-style-type: none;
+}
+.pmd-menu-opening .pmd-menu-list {
+  transform-origin: var(--pmd-menu-show-list-origin, 0 0);
+  animation: pmd-menu-show-list 0.3s cubic-bezier(0, 0.8, 0.3, 1) forwards;
+}
+
+.pmd-menu-list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 80px;
+  padding: 0 16px;
+  height: 46px;
+  color: #000;
+  cursor: pointer;
+}
+.pmd-menu-list-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pmd-menu-list-item:hover::after {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.pmd-menu-back {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 7000;
+}
+.pmd-menu-back {
+  pointer-events: none;
+}
+.pmd-menu-back.active {
+  pointer-events: all;
+}
+
+.pmd-menu-surface--anchor {
+  position: relative;
+}
+
+@keyframes pmd-menu-show {
+  0% {
+    top: var(--pmd-menu-show-offsetY, 0);
+    left: var(--pmd-menu-show-offsetX, 0);
+    width: var(--pmd-menu-show-width-start, 0);
+    height: var(--pmd-menu-show-height-start, 0);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: var(--pmd-menu-show-width-end, auto);
+    height: var(--pmd-menu-show-height-end, auto);
+  }
+}
+@keyframes pmd-menu-show-list {
+  0% {
+    transform: translate(var(--pmd-menu-show-list-translateX, 0), var(--pmd-menu-show-list-translateY, 0));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

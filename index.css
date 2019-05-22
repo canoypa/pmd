@@ -1,0 +1,94 @@
+@import url(./lib/pmd.css);
+@import url(//fonts.googleapis.com/icon?family=Roboto|Material+Icons);
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+main.root {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px 20px;
+}
+.demo-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1em 0;
+  padding: 24px 12px;
+  background-color: #e0e0e0;
+}
+
+#components-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+}
+.component-image {
+  width: 200px;
+  height: 200px;
+}
+
+/* appbar */
+.sample-top-appbar {
+  position: relative;
+  flex: 1;
+}
+.sample-top-appbar .pmd-search-view {
+  background-color: var(--pmd-color-grey-100);
+}
+.demo-appbar-animations {
+  display: flex;
+}
+.demo-appbar-animations > div {
+  width: 500px;
+}
+.demo-appbar-frame {
+  width: 100%;
+  height: 250px;
+}
+
+/* dialog */
+#demo-dialog {
+  position: static;
+}
+
+/* drawer */
+#sample-drawer {
+  position: static;
+  height: auto;
+  transform: translate(0);
+}
+
+/* menu */
+#sample-menu {
+  position: static;
+  visibility: visible;
+  pointer-events: auto;
+}
+#sample-menu .pmd-menu-list {
+  position: static;
+}
+
+/* ripple */
+#demo-ripple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: var(--pmd-shadow-dp4);
+  user-select: none;
+  cursor: pointer;
+  padding: 17px;
+}
+
+/* snackbar */
+#demo-snackbar {
+  position: static;
+  transform: translateY(0);
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modal Drawer - pmd Demo</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <header class="pmd-top-appbar root">
+    <section class="pmd-top-appbar-section pmd-top-appbar-section--align-start">
+      <button id="demo-drawer-trigger" class="pmd-top-appbar-navigation-icon pmd-button pmd-button-icon pmd-ripple pmd-ripple-unbounded"
+        data-pmd-tooltip="main menu" data-re-color="aaa" data-pmd-auto-init="ripple">
+        <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </button>
+      <div class="pmd-top-appbar-title">Title</div>
+    </section>
+  </header>
+  <main class="pmd-top-appbar--fixed-adjust" style="padding: 20px;">
+    <p>content</p>
+  </main>
+  <aside id="demo-drawer" class="pmd-drawer">
+    <div class="pmd-drawer-back"></div>
+    <div class="pmd-drawer-drawer">
+      <div class="pmd-drawer-header">
+        <div class="pmd-drawer-header-title">Title</div>
+        <div class="pmd-drawer-header-subtitle">subtitle</div>
+      </div>
+      <div class="pmd-drawer-content">
+        <ul class="pmd-drawer-nav">
+          <li class="pmd-drawer-nav-item">content</li>
+          <li class="pmd-drawer-nav-item">content</li>
+        </ul>
+        <ul class="pmd-drawer-nav">
+          <li class="pmd-drawer-nav-item">content</li>
+          <li class="pmd-drawer-nav-item">content</li>
+        </ul>
+        <ul class="pmd-drawer-sab-nav">
+          <li class="pmd-drawer-sub-nav-item">content</li>
+          <li class="pmd-drawer-sub-nav-item">content</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <script defer type="module" src="./index.js"></script>
+</body>
+</html>

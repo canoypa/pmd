@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu - pmd Demo</title>
+  <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+  <main class="root">
+    <h1 id="component-name">Menu</h1>
+    <div class="demo-area">
+      <div class="demo-content">
+        <div id="sample-menu" class="pmd-menu">
+          <ul class="pmd-menu-list">
+            <li class="pmd-menu-list-item">Item</li>
+            <li class="pmd-menu-list-item">Item</li>
+            <li class="pmd-menu-list-item">Item</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pmd-menu-surface--anchor">
+      <button id="demo-show-menu" class="demo-show-menu pmd-button pmd-button-icon material-icons">more_vert</button>
+      <div id="demo-menu" class="pmd-menu-container">
+        <div class="pmd-menu-back"></div>
+        <div class="pmd-menu">
+          <ul class="pmd-menu-list">
+            <li class="pmd-menu-list-item">選択</li>
+            <li class="pmd-menu-list-item">すべて選択</li>
+            <li class="pmd-menu-list-item">ビューをカスタマイズ</li>
+            <!-- <li class="pmd-menu-list-item">デフォルトを設定</li>
+            <li class="pmd-menu-list-item">ラベルに追加</li>
+            <li class="pmd-menu-list-item">削除</li>
+            <li class="pmd-menu-list-item">共有</li>
+            <li class="pmd-menu-list-item">ホーム画面に追加</li>
+            <li class="pmd-menu-list-item">着信音を設定</li>
+            <li class="pmd-menu-list-item">ボイスメールに転送</li>
+            <li class="pmd-menu-list-item">ヘルプとフィードバック</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button id="demo-show-menu" class="demo-show-menu pmd-button pmd-button-icon material-icons" style="position:absolute; top:0; left:0;">more_vert</button>
+    <button id="demo-show-menu" class="demo-show-menu pmd-button pmd-button-icon material-icons" style="position:absolute; top:0; right:0;">more_vert</button>
+    <button id="demo-show-menu" class="demo-show-menu pmd-button pmd-button-icon material-icons" style="position:absolute; bottom:0; left:0;">more_vert</button>
+    <button id="demo-show-menu" class="demo-show-menu pmd-button pmd-button-icon material-icons" style="position:absolute; bottom:0; right:0;">more_vert</button>
+  </main>
+  <script defer type="module" src="./index.js"></script>
+</body>
+</html>

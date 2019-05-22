@@ -1,9 +1,9 @@
-.pmd-ripple{
-  will-change: transform,opacity;
+.pmd-ripple {
+  will-change: transform, opacity;
   overflow: hidden;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.pmd-ripple:after{
+.pmd-ripple:after {
   content: '';
   position: absolute;
   top: 0;
@@ -16,32 +16,32 @@
   transform-origin: center center;
   pointer-events: none;
 
-  background-color: #9E9E9E;
+  background-color: #9e9e9e;
 }
-.pmd-ripple.pmd-ripple--active::after{
-  animation: pmd-ripple-in .3s cubic-bezier(.2,.7,.3,.9) forwards;
+.pmd-ripple.pmd-ripple--active::after {
+  animation: pmd-ripple-in 0.3s cubic-bezier(0.2, 0.7, 0.3, 0.9) forwards;
 }
-.pmd-ripple.pmd-ripple--remove::after{
-  animation: pmd-ripple-out .5s ease;
+.pmd-ripple.pmd-ripple--remove::after {
+  animation: pmd-ripple-out 0.5s ease;
 }
 
-@keyframes pmd-ripple-in{
-  from{
-    transform: translate(var(--pmd-ripple-start,0)) scale(0);
+@keyframes pmd-ripple-in {
+  from {
+    transform: translate(var(--pmd-ripple-start, 0)) scale(0);
     opacity: 0;
   }
-  to{
-    transform: translate(var(--pmd-ripple-end,0)) scale(1);
-    opacity: .4;
+  to {
+    transform: translate(var(--pmd-ripple-end, 0)) scale(1);
+    opacity: 0.4;
   }
 }
-@keyframes pmd-ripple-out{
-  from{
-    transform: translate(var(--pmd-ripple-end,0)) scale(1);
-    opacity: .4;
+@keyframes pmd-ripple-out {
+  from {
+    transform: translate(var(--pmd-ripple-end, 0)) scale(1);
+    opacity: 0.4;
   }
-  to{
-    transform: translate(var(--pmd-ripple-end,0)) scale(1);
+  to {
+    transform: translate(var(--pmd-ripple-end, 0)) scale(1);
     opacity: 0;
   }
 }
