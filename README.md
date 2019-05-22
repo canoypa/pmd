@@ -19,5 +19,5 @@ js
 ```javascript
 import * as pmd from '@/pmd.js';
 
-const ripple = new pmd.ripple(document.getElementById('#sample-button'));
+const ripple = new pmd.ripple(document.getElementById('sample-button'));
 ```
